@@ -80,7 +80,9 @@
 
       const weatherRes = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`);
       const weatherData = await weatherRes.json();
-
+      
+      const sunrise = weatherData.daily?.sunrise?.[0] || "--";
+      const sunset = weatherData.daily?.sunset?.[0] || "--";
       const temp = weatherData.current_weather.temperature;
       const feelsLike = Math.round(temp - 1);
       const tempColor = temp > 30 ? "red" : temp < 15 ? "lightblue" : "white";
@@ -95,6 +97,8 @@
         <p>🌤 Condition: Clear</p>
         <p>💨 Wind Speed: ${wind} km/h</p>
         <p>🧭 Wind Direction: ${windDir}°</p>
+        <p>🌅 Sunrise: ${sunrise}</p>
+        <p>🌇 Sunset: ${sunset}</p>
         <p>💧 Humidity: ${humidity}%</p>
       `;
     }
