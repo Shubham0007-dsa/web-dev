@@ -83,12 +83,14 @@
 
       const temp = weatherData.current_weather.temperature;
       const wind = weatherData.current_weather.windspeed;
+      const windDir = weatherData.current_weather.winddirection;
       const humidity = weatherData.hourly.relativehumidity_2m[0];
 
       document.getElementById('weather').innerHTML = `
         <p><strong>${geoData.results[0].name}</strong></p>
         <p>🌡 Temperature: ${temp}°C</p>
         <p>💨 Wind Speed: ${wind} km/h</p>
+        <p>🧭 Wind Direction: ${windDir}°</p>
         <p>💧 Humidity: ${humidity}%</p>
       `;
     }
