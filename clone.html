@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flipkart Clone</title>
+  <style>
+    body { margin:0; font-family:Arial, sans-serif; background:#f1f3f6; }
+
+    .navbar {
+      background:#2874f0;
+      padding:10px 20px;
+      display:flex;
+      align-items:center;
+      gap:20px;
+    }
+    .navbar img { height:35px; }
+    .search-box {
+      flex:1;
+      display:flex;
+    }
+    .search-box input {
+      width:100%; padding:10px;
+      border:none; border-radius:2px 0 0 2px;
+    }
+    .search-box button {
+      padding:10px 20px; border:none;
+      background:#ffe11b;
+      border-radius:0 2px 2px 0;
+      cursor:pointer;
+    }
+
+    .nav-links { color:white; font-weight:bold; cursor:pointer; }
+
+    .categories {
+      background:white;
+      display:flex;
+      justify-content:space-around;
+      padding:15px 0;
+      margin-top:5px;
+    }
+    .cat-item { text-align:center; font-size:14px; cursor:pointer; }
+
+    .banner img {
+      width:100%; border-radius:4px;
+      margin-top:10px;
+    }
+
+    .section {
+      background:white;
+      margin:20px;
+      border-radius:4px;
+      padding:15px;
+    }
+    .section h2 { margin:0 0 15px; }
+
+    .product-row {
+      display:flex;
+      gap:20px;
+      overflow-x:auto;
+      padding-bottom:10px;
+    }
+
+    .product {
+      background:#fff;
+      min-width:180px;
+      padding:10px;
+      border-radius:6px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+      cursor:pointer;
+      text-align:center;
+    }
+    .product img { height:120px; object-fit:contain; }
+    .price { color:green; font-weight:bold; margin-top:5px; }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <img src="https://imgs.search.brave.com/7IvCtN23zp9asGkIEilh1ElQTY3psLGiRnOF1ESSlYw/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9ib290/ZmxhcmUuY29tL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI1LzA3/L0ZsaXBrYXJ0LUxv/Z28tc2NhbGVkLnBu/Zw" alt="Logo" />
+    <div class="search-box">
+      <input type="text" placeholder="Search for products, brands and more" />
+      <button>Search</button>
+    </div>
+    <div class="nav-links">Login</div>
+    <div class="nav-links">Cart</div>
+    <div class="nav-links">Become a Seller</div>
+  </div>
+
+  <div class="categories">
+    <div class="cat-item">Mobiles</div>
+    <div class="cat-item">Electronics</div>
+    <div class="cat-item">Fashion</div>
+    <div class="cat-item">Home</div>
+    <div class="cat-item">Beauty</div>
+    <div class="cat-item">Grocery</div>
+  </div>
+
+  
+  <div class="banner">
+    <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/07e3869b78688dd9.jpeg" />
+  </div>
+
+  
+  <div class="section">
+    <h2>Best of Electronics</h2>
+    <div class="product-row">
+
+      <div class="product">
+        <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/n/m/7/-original-imah3kft7mf5hf4t.jpeg" />
+        <p>Smartphone X</p>
+        <p class="price">₹12,999</p>
+      </div>
+
+      <div class="product">
+        <img src="https://rukminim2.flixcart.com/image/312/312/kzllrbk0/headphone/a/y/2/-original-imagbzdmjf6qt94f.jpeg" />
+        <p>Wireless Headphones</p>
+        <p class="price">₹1,499</p>
+      </div>
+
+      <div class="product">
+        <img src="https://rukminim2.flixcart.com/image/312/312/l432ikw0/television/c/q/z/-original-imagfwr5ezgq7e5j.jpeg" />
+        <p>LED TV 32 inch</p>
+        <p class="price">₹11,999</p>
+      </div>
+
+      <div class="product">
+        <img src="https://rukminim2.flixcart.com/image/312/312/kljrri80/smartwatch/y/g/k/yes-android-ios-na-hw22-original-imagykckg92yo5ph.jpeg" />
+        <p>Smartwatch</p>
+        <p class="price">₹999</p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
