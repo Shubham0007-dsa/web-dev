@@ -82,6 +82,7 @@
       const weatherData = await weatherRes.json();
 
       const temp = weatherData.current_weather.temperature;
+      const feelsLike = Math.round(temp - 1);
       const tempColor = temp > 30 ? "red" : temp < 15 ? "lightblue" : "white";
       const wind = weatherData.current_weather.windspeed;
       const windDir = weatherData.current_weather.winddirection;
@@ -90,6 +91,7 @@
       document.getElementById('weather').innerHTML = `
         <p><strong>${geoData.results[0].name}</strong></p>
         <p style="color:${tempColor}">🌡 Temperature: ${temp}°C</p>
+        <p>🤔 Feels Like: ${feelsLike}°C</p>
         <p>🌤 Condition: Clear</p>
         <p>💨 Wind Speed: ${wind} km/h</p>
         <p>🧭 Wind Direction: ${windDir}°</p>
