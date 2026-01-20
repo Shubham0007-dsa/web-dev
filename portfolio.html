@@ -84,6 +84,16 @@
   }
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
   </style>
@@ -94,7 +104,7 @@
     <p>Python Developer | Student | Learner</p>
   </header>
 
-  <section class="section">
+  <section class="section fade-in">
     <h2>About Me</h2>
     <p style="text-align:center; font-size:1.1rem;">
   Hi! I'm Shubham Maurya, a passionate learner and aspiring developer. 
@@ -121,7 +131,7 @@
 
 
   </section>
-  <section class="section">
+  <section class="section fade-in">
   <h2>Skills</h2>
   <div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap; font-size:1.1rem;">
     <div>🔥 HTML</div>
@@ -132,8 +142,7 @@
   </div>
 </section>
 
-
-  <section class="section">
+<section class="section fade-in">
     <h2>Projects</h2>
     <div class="projects">
       <div class="card">
@@ -186,5 +195,23 @@
   </div>
 </footer>
 
+<script>
+  const faders = document.querySelectorAll('.fade-in');
+
+  const appearOnScroll = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
 </body>
 </html>
