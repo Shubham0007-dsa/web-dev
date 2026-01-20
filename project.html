@@ -78,7 +78,7 @@
       const lat = geoData.results[0].latitude;
       const lon = geoData.results[0].longitude;
 
-      const weatherRes = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`);
+      const weatherRes = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&hourly=relativehumidity_2m,surface_pressure`);
       const weatherData = await weatherRes.json();
       
       const sunrise = weatherData.daily?.sunrise?.[0] || "--";
@@ -89,6 +89,7 @@
       const wind = weatherData.current_weather.windspeed;
       const windDir = weatherData.current_weather.winddirection;
       const humidity = weatherData.hourly.relativehumidity_2m[0];
+      const pressure = weatherData.hourly.surface_pressure[0];
 
       document.getElementById('weather').innerHTML = `
         <p><strong>${geoData.results[0].name}</strong></p>
@@ -97,6 +98,7 @@
         <p>🌤 Condition: Clear</p>
         <p>💨 Wind Speed: ${wind} km/h</p>
         <p>🧭 Wind Direction: ${windDir}°</p>
+        <p>🔽 Pressure: ${pressure} hPa</p>
         <p>🌅 Sunrise: ${sunrise}</p>
         <p>🌇 Sunset: ${sunset}</p>
         <p>💧 Humidity: ${humidity}%</p>
