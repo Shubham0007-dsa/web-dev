@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shubham Maurya - Portfolio</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+    }
+    header {
+  background: #111;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 3px solid #2874f0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  letter-spacing: 0.5px;
+}
+
+    header h1 { margin: 0; font-size: 3rem; }
+    header p { margin: 10px 0 0; font-size: 1.2rem; }
+
+    .section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+      transition: 0.3s ease;
+    }
+
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 30px 10px;
+      margin-top: 50px;
+    }
+
+    
+    @media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 30px 15px;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Shubham Maurya</h1>
+    <p>Python Developer | Student | Learner</p>
+  </header>
+
+  <section class="section fade-in">
+    <h2>About Me</h2>
+    <p style="text-align:center; font-size:1.1rem;">
+  Hi! I'm Shubham Maurya, a passionate learner and aspiring developer. 
+  I enjoy building web projects using HTML, CSS, JavaScript, and Python.
+  I'm continuously improving my skills by creating real-world projects 
+  and exploring new technologies.
+</p>
+
+
+<div style="text-align:center; margin-top:20px;">
+  <a href="resume.pdf" download
+     style="
+       background:#2874f0;
+       padding:12px 24px;
+       border-radius:8px;
+       color:white;
+       text-decoration:none;
+       font-weight:bold;
+       display:inline-block;
+     ">
+    📄 Download Resume
+  </a>
+</div>
+
+
+  </section>
+  <section class="section fade-in">
+  <h2>Skills</h2>
+  <div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap; font-size:1.1rem;">
+    <div>🔥 HTML</div>
+    <div>🔥 CSS</div>
+    <div>🔥 JavaScript</div>
+    <div>🔥 Python</div>
+    <div>🔥 Git & GitHub</div>
+  </div>
+</section>
+
+<section class="section fade-in">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Python Calculator</h3>
+        <p>A calculator built using Python, one of my early but solid projects.</p>
+      </div>
+
+      <div class="card">
+  <h3>Weather App</h3>
+  <p>A real-time weather application built using HTML, CSS and JavaScript.</p>
+</div>
+
+<div class="card">
+  <h3>Flipkart Clone</h3>
+  <p>An e-commerce homepage clone inspired by Flipkart with clean UI.</p>
+</div>
+
+
+      <div class="card">
+        <h3>Birthday GUI App</h3>
+        <p>A GUI-based Python gift program with images & music integration.</p>
+      </div>
+      <div class="card">
+        <h3>More Projects Coming Soon</h3>
+        <p>I keep learning and building new stuff.</p>
+      </div>
+    </div>
+  </section>
+
+    <div style="text-align:center; margin-top:20px;">
+  <a href="https://github.com/yourusername" target="_blank" style="margin:10px;">
+    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" 
+         width="35" />
+  </a>
+
+  <a href="https://linkedin.com/in/yourusername" target="_blank" style="margin:10px;">
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" 
+         width="35" />
+  </a>
+</div>
+  
+<section class="section fade-in" id="contact">
+  <h2>Contact Me</h2>
+
+  <form style="max-width:500px; margin:auto;">
+    <input 
+      type="text" 
+      placeholder="Your Name" 
+      style="width:100%; padding:12px; margin-bottom:10px; border-radius:8px; border:1px solid #ccc;"
+      required
+    >
+
+    <input 
+      type="email" 
+      placeholder="Your Email" 
+      style="width:100%; padding:12px; margin-bottom:10px; border-radius:8px; border:1px solid #ccc;"
+      required
+    >
+
+    <textarea 
+      placeholder="Your Message"
+      rows="4"
+      style="width:100%; padding:12px; margin-bottom:10px; border-radius:8px; border:1px solid #ccc;"
+      required
+    ></textarea>
+
+    <button 
+      type="submit"
+      style="width:100%; padding:12px; background:#2874f0; color:white; border:none; border-radius:8px; font-size:16px; font-weight:bold;"
+    >
+      Send Message
+    </button>
+  </form>
+</section>
+
+
+<footer style="
+  background:#111;
+  color:white;
+  padding:25px 10px;
+  text-align:center;
+  margin-top:40px;
+">
+  <p style="margin:5px 0;">© 2026 Shubham Maurya | Built with ❤️</p>
+
+  <div style="margin-top:10px;">
+    <a href="#about" style="color:#fff; margin:0 12px;">About</a>
+    <a href="#projects" style="color:#fff; margin:0 12px;">Projects</a>
+    <a href="#contact" style="color:#fff; margin:0 12px;">Contact</a>
+  </div>
+</footer>
+
+<script>
+  const faders = document.querySelectorAll('.fade-in');
+
+  const appearOnScroll = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
+</body>
+</html>
